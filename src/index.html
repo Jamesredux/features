@@ -10,33 +10,63 @@
       <div class="header">
         <div class="logo">James Redux</div>
 
-        <div class="account dropdown">
-          <div class="dropdown-btn">
-            <h3>Account</h3>
+        <div class="dropdowns">
+          <div class="account dropdown">
+            <button class="dropdown-btn">Account</button>
+            <div class="dropdown-items hidden">
+              <ul>
+                <li
+                  class="menu-item"
+                  data-type="account"
+                  data-account="settings"
+                >
+                  Settings
+                </li>
+                <li
+                  class="menu-item"
+                  data-type="account"
+                  data-account="details"
+                >
+                  Details
+                </li>
+                <li
+                  class="menu-item"
+                  data-type="account"
+                  data-account="address"
+                >
+                  Address
+                </li>
+                <li class="menu-item" data-type="account" data-account="logout">
+                  Log Out
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="dropdown-items">
-            <ul>
-              <li>Settings</li>
-              <li>Details</li>
-              <li>Address</li>
-              <li>Log Out</li>
-            </ul>
-          </div>
-        </div>
 
-        <div class="menu dropdown">
-          <div class="dropdown-btn">
-            <h3>Menu</h3>
-          </div>
-          <div class="dropdown-items">
-            <ul>
-              <li>Blue</li>
-              <li>Red</li>
-              <li>Green</li>
-              <li>Orange</li>
-              <li>Yellow</li>
-              <li>Pink</li>
-            </ul>
+          <div class="menu dropdown">
+            <button class="dropdown-btn">Menu</button>
+            <div class="dropdown-items hidden">
+              <ul>
+                <li class="menu-item" data-type="colors" data-color="blue">
+                  Blue
+                </li>
+                <li class="menu-item" data-type="colors" data-color="red">
+                  Red
+                </li>
+                <li class="menu-item" data-type="colors" data-color="green">
+                  Green
+                </li>
+                <li class="menu-item" data-type="colors" data-color="orange">
+                  Orange
+                </li>
+                <li class="menu-item" data-type="colors" data-color="yellow">
+                  Yellow
+                </li>
+                <li class="menu-item" data-type="colors" data-color="pink">
+                  Pink
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
