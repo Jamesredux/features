@@ -92,7 +92,7 @@ body {
 }
 
 .slider-box {
-  height: 600px;
+  height: 700px;
   width: 600px;
   background-color: lightskyblue;
   padding-top: 50px;
@@ -106,7 +106,7 @@ body {
   grid-template-columns: repeat(6, 500px);
   gap: 50px;
   transform: translateX(0px);
-  transition: transform 300ms ease-in;
+  transition: transform 200ms ease-in-out;
   margin-left: 50px;
 }
 
@@ -163,6 +163,30 @@ body {
 
 .selected {
   background-color: gray;
+}
+
+.play-pause {
+  display: flex;
+  justify-content: center;
+}
+
+.play,
+.pause {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid rgb(59, 59, 59);
+  color: rgb(59, 59, 59);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 3px;
+  background-color: sandybrown;
+}
+
+.play:hover,
+.pause:hover {
+  background-color: rgba(244, 164, 96, 0.7);
+  color: black;
 }
 @media all and (max-width: 600px) {
   .dropdown {

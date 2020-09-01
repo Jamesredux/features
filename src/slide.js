@@ -5,6 +5,10 @@ const slide = (() => {
   const slidesRow = document.querySelector(".slides-row");
   const backArrow = document.querySelector(".back");
   const forwardArrow = document.querySelector(".forward");
+  const playButton = document.querySelector(".play");
+  const pauseButton = document.querySelector(".pause");
+  var slideShow;
+
   let currentSlide = 1;
 
   const moveBack = () => {
@@ -43,11 +47,28 @@ const slide = (() => {
     changeImage(currentSlide);
   };
 
+  const startSlidehow = () => {
+    slideShow = setInterval(runSlideshow, 2000);
+  };
+
+  const stopSlideshow = () => {
+    clearInterval(slideShow);
+  };
+
+  const runSlideshow = () => {
+    currentSlide += 1;
+    if (currentSlide > 6) {
+      currentSlide = 1;
+    }
+    changeImage(currentSlide);
+  };
   slideBullets.forEach((bullet) =>
     bullet.addEventListener("click", selectSlide)
   );
   forwardArrow.addEventListener("click", moveForward);
   backArrow.addEventListener("click", moveBack);
+  playButton.addEventListener("click", startSlidehow);
+  pauseButton.addEventListener("click", stopSlideshow);
 })();
 
 export default slide;
